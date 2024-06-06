@@ -7,9 +7,12 @@ class Card
 end
 
 RSpec.describe Card do
+  before do
+    @card = Card.new('Ace of Spades')
+  end
+
   it 'it has a type' do
-  	card = 	Card.new('Ace of Spades')
-  	expect(card.type).to eq('Ace of Spades')
+  	expect(@card.type).to eq('Ace of Spades')
   	# expect(card.type).to(eq('Ace of Spades'))
   end
 end
